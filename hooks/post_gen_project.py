@@ -37,6 +37,8 @@ pip install -e .
 You will need to manually add data to .gitignore to prevent it from syncing to
 version control.
 
+Update the author information in setup.cfg
+
 Don't forget to sync to GitHub. Have fun!
 """
 print(help)
