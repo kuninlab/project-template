@@ -1,4 +1,4 @@
-# true-neutral-cookiecutter
+# project-template
 A minimalist cookiecutter for research and data science projects.
 Use this as a project template for your lab projects!
 
