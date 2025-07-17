@@ -23,10 +23,17 @@ _____________________________________________________________________________
 _____':::::_____________________________________\__\_________________________
 
 If you have not done so already, create a conda environment for your new 
-project with:
+project. A basic environment.yml file has been created for you, so the
+following should work:
 
 cd {{cookiecutter.repo_name}}
-conda create --name {{cookiecutter.repo_name}} python=3.11
+conda env create -f environment.yml
+conda activate {{cookiecutter.package_name}}
+
+If you would like to specify your own environment, you can do the following:
+
+cd {{cookiecutter.repo_name}}
+conda env create --name {{cookiecutter.repo_name}} python=3.11
 conda activate {{cookiecutter.repo_name}}
 conda env export > environment.yml
 
@@ -37,7 +44,7 @@ pip install -e .
 You will need to manually add data to .gitignore to prevent it from syncing to
 version control.
 
-Update the author information in setup.cfg
+!!! Update the author information in setup.cfg !!!
 
 Don't forget to sync to GitHub. Have fun!
 """

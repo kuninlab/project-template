@@ -1,0 +1,16 @@
+name: {{cookiecutter.package_name}}
+channels:
+ - conda-forge
+ - defaults
+dependencies:
+ - python=3.12
+ - jupyter
+ - scipy
+ - numpy
+ - pandas
+ - scikit-learn
+ - numpy
+ - matplotlib
+ - bokeh
+ - colorcet
+ - pip
