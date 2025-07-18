@@ -33,7 +33,7 @@ conda activate {{cookiecutter.package_name}}
 If you would like to specify your own environment, you can do the following:
 
 cd {{cookiecutter.repo_name}}
-conda env create --name {{cookiecutter.repo_name}} python=3.11
+conda env create --name {{cookiecutter.repo_name}} python={{cookiecutter.python_version}}
 conda activate {{cookiecutter.repo_name}}
 conda env export > environment.yml
 
