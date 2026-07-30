@@ -1,0 +1,2 @@
+# Workflow configuration, read by the Snakefile via `configfile: "config/config.yaml"`.
+{}

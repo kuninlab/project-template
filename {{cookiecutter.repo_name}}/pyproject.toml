@@ -1,3 +1,29 @@
 [build-system]
-requires = ["setuptools>=42.0", "wheel"]
+requires = ["setuptools>=65", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{ cookiecutter.package_name }}"
+version = "0.1.0"
+description = "{{ cookiecutter.description }}"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">={{ cookiecutter.python_version }}"
+authors = [
+    {name = "Kunin Lab"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Science/Research",
+]
+dependencies = [
+    # add your project's runtime dependencies here
+]
+
+[project.urls]
+Repository = "https://github.com/kuninlab/{{ cookiecutter.repo_name }}"
+
+[tool.setuptools.packages.find]
+where = ["src"]

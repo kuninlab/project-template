@@ -1,0 +1,10 @@
+configfile: "config/config.yaml"
+
+
+rule all:
+    input:
+        [],  # list your workflow's final output files here
+
+
+# Split your workflow into modules as it grows, and pull them in with:
+#     include: "rules/my_rules.smk"

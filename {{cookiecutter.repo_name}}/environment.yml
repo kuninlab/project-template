@@ -1,6 +1,9 @@
 name: {{cookiecutter.package_name}}
 channels:
  - conda-forge
+{%- if cookiecutter.use_snakemake == "yes" %}
+ - bioconda
+{%- endif %}
  - defaults
 dependencies:
  - python={{cookiecutter.python_version}}
@@ -9,8 +12,10 @@ dependencies:
  - numpy
  - pandas
  - scikit-learn
- - numpy
  - matplotlib
  - bokeh
  - colorcet
+{%- if cookiecutter.use_snakemake == "yes" %}
+ - snakemake
+{%- endif %}
  - pip

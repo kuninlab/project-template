@@ -1,3 +1,9 @@
+import shutil
+
+if "{{ cookiecutter.use_snakemake }}" == "no":
+    shutil.rmtree("workflow", ignore_errors=True)
+    shutil.rmtree("config", ignore_errors=True)
+
 help = """
 Your project has been created!
 _____________________________________________________________________________
@@ -41,10 +47,15 @@ Install your new project in your local conda environment with:
 
 pip install -e .
 
-You will need to manually add data to .gitignore to prevent it from syncing to
-version control.
+Files placed under data/ are ignored by git by default (except for the
+README.md placeholders) so they won't sync to version control.
+{% if cookiecutter.use_snakemake == "yes" %}
+A Snakemake skeleton has been set up under workflow/ and config/. Add rules
+under workflow/rules/, then run the pipeline with:
 
-!!! Update the author information in setup.cfg !!!
+snakemake --cores all
+{% endif %}
+!!! Update the author information in pyproject.toml !!!
 
 Don't forget to sync to GitHub. Have fun!
 """
