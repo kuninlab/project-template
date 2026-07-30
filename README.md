@@ -20,3 +20,4 @@ pip install cookiecutter
 This is forked from Patrick Mineault's [`true-neutral-cookiecutter`](https://github.com/patrickmineault/true-neutral-cookiecutter).
 Minor updates have been made to bring the "packaging" up to modern standards (or at least, a modern standard), as well as adding the option to include some [`snakemake`](https://snakemake.readthedocs.io/en/stable/index.html) scaffolding.
 You should be able to use this cookiecutter in as described in his guide to research programming, [The Good Research Code Handbook](https://goodresearch.dev/).
+See also his [thoughts on using Claude Code](https://www.neuroai.science/p/claude-code-for-scientists) and accompanying [updated cookie cutter](https://github.com/patrickmineault/claude-cookie)
